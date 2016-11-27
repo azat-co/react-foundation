@@ -11,47 +11,6 @@ Last updated: Nov 2016
 
 ---
 
-# Lists
-
----
-
-### What are Lists
-
-Lists are often use on webpages. They consist of many similar items wrapped in a parent element. Examples include:
-
-* Menus
-* Ordered and unordered lists
-* Grids
-
----
-
-### List Implementation
-
-The easiest way to implement a list in React.js is to use array and map(), e.g.,
-
-```js
-render() {
-  return (
-    <ul>
-      {this.props.items.map((value, index) =>{
-        return <li>{value}</li>
-      })}
-    </ul>
-  )
-}
-```
-
----
-
-### Menu Example
-
-This example renders list of menu items and uses Twitter Bootstrap.
-
-![inline](images/menu.png)
-
-<http://plnkr.co/edit/c47Pfh?p=preview>
-
----
 
 
 

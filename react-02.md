@@ -143,8 +143,6 @@ Even use JavaScript in the curly braces!
 
 ### Variable Example
 
-In the `variable/script.jsx` file, we output the value of `a`:
-
 ```js
 class Content extends React.Component {
   render() {
@@ -162,3 +160,180 @@ class Content extends React.Component {
 ```
 
 ---
+
+
+# Props
+
+Props or properties are immutable meaning they don't change. They are passed by parent components to their children.
+
+---
+
+### Using Props
+
+```js
+class ClickCounterButton extends React.Component {
+  render() {
+    return <button onClick={this.props.handler}>Don't click me {this.props.counter} times! </button>
+  }
+}
+```
+
+---
+
+### Supplying Props
+
+Provide props to the ClickCounterButton component:
+
+```js
+class Content extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {counter: 0}
+    this.click = this.click.bind(this)
+  }
+  click(event) {
+    this.setState({counter: ++this.state.counter})
+  }
+  render() {
+    return (
+      <div>
+        <ClickCounterButton counter={this.state.counter} handler={this.click}/>
+      </div>
+    )
+  }
+}
+```
+
+<http://plnkr.co/edit/3HqvdG?p=preview>
+
+
+---
+
+
+# States
+
+States are mutable properties of components meaning they can change. When state changes the corresponding view changes, but everything else in DOM remains intact.
+
+---
+
+### Initial State
+
+
+```js
+class Content extends React.Component {
+  constructor(props){
+    super(props)
+    this.state = {a: 0}
+  },
+  render() {
+    // ...
+  }
+}
+```
+
+---
+
+### Sidenote: ES5
+
+The initial state is set by the `getInitialState` method which is called once when the element is created.
+
+Let's use this method to return `a`:
+
+```js
+var Content = React.createClass({
+  getInitialState: function(){
+    return {a: 0}
+  },
+  render: function() {
+    // ...
+  }
+})
+```
+
+---
+
+### Updating State
+
+State is updated with `this.setState()`, so this code will update the value with a random number every 300 milliseconds:
+
+```js
+class Content extends React.Component {
+  constructor(props){
+    super(props)
+    this.state = {a: 0}
+    setInterval(()=>{
+      this.setState({a: Math.random()})
+    }, 300)
+  }
+  render() {
+    // ...
+  }
+}
+```
+
+---
+
+### Outputting The State
+
+To output the state property `a`, we use `{this.state.a}`:
+
+```js
+  render() {
+    return (
+      <div>
+        <h1>Changing the State</h1>
+        <p>This value is random: {this.state.a}</p>
+      </div>
+    )
+  }
+}
+```
+
+---
+
+
+# Lists
+
+---
+
+### What are Lists
+
+Lists are often use on webpages. They consist of many similar items wrapped in a parent element. Examples include:
+
+* Menus
+* Ordered and unordered lists
+* Grids
+
+---
+
+### List Implementation
+
+The easiest way to implement a list in React.js is to use array and map(), e.g.,
+
+```js
+render() {
+  return (
+    <ul>
+      {this.props.items.map((value, index) =>{
+        return <li>{value}</li>
+      })}
+    </ul>
+  )
+}
+```
+
+---
+
+# Clock Project
+
+
+Source: `code/clock`
+
+
+---
+
+![](images/clock.png)
+
+---
+
+## Demo 💻
