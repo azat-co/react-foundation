@@ -7,7 +7,8 @@ const fD = ReactDOM.findDOMNode
 class Autocomplete extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {options: this.props.options,
+    this.state = {
+      options: this.props.options,
       filteredOptions: this.props.options,
       currentOption: ''
     }
@@ -27,13 +28,11 @@ class Autocomplete extends React.Component {
       .catch(console.error)
   }
   filter(event) {
-    // console.log(event)
     this.setState({
       currentOption: event.target.value,
       filteredOptions: (this.state.options.filter(function(option, index, list){
         return (event.target.value === option.name.substr(0, event.target.value.length))
       }))
-    }, function(){
     })
   }
   addOption(event) {
@@ -45,9 +44,9 @@ class Autocomplete extends React.Component {
         if(!body){
           return console.error('Failed to save')
         }
-        this.setState({ options: [body].concat(this.state.options) }, ()=>{
-          // console.log(this.state.options)
-          this.filter({target: {value: currentOption}})
+        this.setState({options: [body].concat(this.state.options) },
+          ()=>{
+            this.filter({target: {value: currentOption}})
         })
       })
       .catch(error=>{return console.error('Failed to save')})
