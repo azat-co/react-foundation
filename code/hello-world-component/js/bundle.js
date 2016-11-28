@@ -21429,8 +21429,7 @@
 	    return React.createElement(
 	      'h1',
 	      null,
-	      'Hello world!!! ',
-	      365 / 7
+	      'Hello world!!!'
 	    );
 	  }
 	}
