@@ -24,7 +24,7 @@ class Autocomplete extends React.Component {
           return console.error('Failed to load')
         }
       this.setState({options: body})
-      })
+    })
       .catch(console.error)
   }
   filter(event) {
