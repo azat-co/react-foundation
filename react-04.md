@@ -11,6 +11,9 @@ Azat Mardan @azat_co
 
 ---
 
+## Before we move on: Did you make improvements to Timer? If not, go back and implement them now.
+
+---
 
 # Props Features
 
@@ -18,7 +21,7 @@ Azat Mardan @azat_co
 
 ### Default Props
 
-The `getDefaultProps` method is invoked once before the instance is created. The properties in the returned object will be set on `this.props` if they are not set by the parent.
+Use `defaultProps` class attribute/property to set props on `this.props` if they are not set by the parent.
 
 ---
 
@@ -55,16 +58,6 @@ class Content extends React.Component {
   }
 }
 ```
-
----
-
-### Default Props Demo
-
-If the prop is missing the default value is used:
-
-![inline](images/default-props.png)
-
-Source code: `/default-props` or <http://plnkr.co/edit/7JC7qg3Ka87i5ObETV7r?p=preview>.
 
 ---
 
@@ -120,9 +113,6 @@ Button.propTypes = {
 }
 ```
 
-`/prop-types` or <http://plnkr.co/edit/fK74C6wrQeF5uRSno6Dy?p=preview>
-
-
 ---
 
 
@@ -174,6 +164,11 @@ email(props, propName, componentName) {
 There are many additional types and helper methods. Please refer to the documentation:
 
 <https://facebook.github.io/react/docs/reusable-components.html#prop-validation>
+
+---
+
+
+### Try the default and prop type demo: <http://plnkr.co/edit/wYOMF9?p=preview>
 
 ---
 
@@ -264,8 +259,6 @@ ReactDOM.render(
 )
 ```
 
-Source code: `/children` or <http://plnkr.co/edit/ykC29RjWxxmblI2HyfiV?p=preview>.
-
 ---
 
 ### Children is an Array
@@ -282,8 +275,6 @@ Children is an Array if n>1. You can access individual elements link this:
 ### Children Truthy Check
 
 There's only one element, this.props.children is NOT an array. Use `React.Children.count(this.props.children)` to get the accurate count.
-
-More helpers: <https://facebook.github.io/react/docs/top-level-api.html#react.children>
 
 ---
 
@@ -319,8 +310,6 @@ class Content extends React.Component {
 }
 ```
 
-Source code: `/style` or <http://plnkr.co/edit/8OjJ1vBPH7sN9pNf065G?p=preview>.
-
 ---
 
 
@@ -349,8 +338,10 @@ class Content extends React.Component {
 
 ---
 
+## Let's pull the data from the server! ☁️
 
 
+---
 
 
 ### Autocomplete Project
@@ -361,19 +352,11 @@ class Content extends React.Component {
 ---
 
 
-# Demo
-
-Project: Autocomplete
-
-Source code:  `code/react/autocomplete`
+![fit](images/autocomplete-1.png)
 
 ---
 
-![](images/autocomplete-1.png)
-
----
-
-![](images/autocomplete-2.png)
+![fit](images/autocomplete-2.png)
 
 ---
 
@@ -388,6 +371,13 @@ Navigate to <http://localhost:3000>
 
 ---
 
+# Demo
+
+Project: Autocomplete
+
+Source code:  `code/autocomplete`
+
+---
 
 ## Workshop: Autocomplete 🔨💻😁
 

@@ -11,149 +11,7 @@ Azat Mardan @azat_co
 
 ---
 
-
 # React is about simplicity!
-
----
-
-# Why should you care?
-
-
----
-
-# Why should you care?
-
-* So many technologies
-
----
-
-# Why should you care?
-
-* So many technologies
-* Spaghetti code
-
-
----
-
-# Why should you care?
-
-* So many technologies
-* Spaghetti code
-* Hard to test
-
----
-
-### The Definition
-
-What is React.js?
-
-> It’s not about templates, or data binding, or DOM manipulation. It’s about using functional programming with a virtual DOM representation to build ambitious, high-performance apps with JavaScript.
-
-Pete Hunt <http://bit.ly/1U53Rb2>
-
----
-
-# What React Brings to the Table
-
----
-
-# Key Differences
-
----
-
-### Key Differences
-
-* Virtual DOM
-
----
-
-### Key Differences
-
-* Virtual DOM
-* Declarative (not imperative)
-
----
-
-### Key Differences
-
-* Virtual DOM
-* Declarative (not imperative)
-* Functional
-
----
-
-
-### Key Differences
-
-* Virtual DOM
-* Declarative (not imperative)
-* Functional
-* No DOM manipulation
-
----
-
-
-### Key Differences
-
-* Virtual DOM
-* Declarative (not imperative)
-* Functional
-* No DOM manipulation
-* No templates
-
----
-
-
-### Key Differences
-
-* Virtual DOM
-* Declarative (not imperative)
-* Functional
-* No DOM manipulation
-* No templates
-* No event listeners or handlers
-
----
-
-### MVC
-
-React.js is not a model-view-controller (MVC) framework/library.
-
----
-
-# You need to bring your own models and routers.
-
-
----
-
-# React.js is only a VIEW.
-
-
----
-
-# Web Stack
-
-## React.js can work with other MVC-like framework such as Backbone.js and Angular.js.
-
----
-
-
-## React.js is often used with Flux and React Router.
-
-
----
-
-# React Foundation
-## Overview
-
-![inline 100%](images/azat.jpeg)
-Azat Mardan @azat_co
-
-![inline right](images/nu.png)
-
----
-
-# Module 1: Baby Steps
 
 ---
 
@@ -204,7 +62,11 @@ Azat Mardan @azat_co
 1. Prop Types and Default Prop Values
 1. Higher-Order Components
 1. Rendering Children
-1. `componentDidMount()` and Other Components Lifecycle Events
+1. `componentDidMount()` and AJAX/XHR requests
+
+---
+
+## Now, go ahead and teach React to others! 🏁
 
 ---
 
@@ -215,4 +77,5 @@ Azat Mardan @azat_co
 * React Router
 * GraphQL
 * Relay
+
 

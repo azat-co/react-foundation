@@ -81,7 +81,7 @@ const HelloWorld = require('./hello-world.jsx')
 
 ReactDOM.render(
   <HelloWorld/>,
-  document.getElementById('example')
+  document.getElementById('content')
 )
 ```
 
@@ -97,7 +97,7 @@ Point your `index.html` to use `js/bundle.js`:
   <head>
   </head>
   <body>
-    <div id="example"></div>
+    <div id="content"></div>
     <script src="js/bundle.js"></script>
   </body>
 </html>
@@ -221,10 +221,10 @@ States are mutable properties of components meaning they can change. When state 
 
 ```js
 class Content extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props)
     this.state = {a: 0}
-  },
+  }
   render() {
     // ...
   }

@@ -17,7 +17,7 @@ Azat Mardan @azat_co
 
 ### React.js CDN
 
-Or hotlink to Facebook CDN:
+KISS by linking to CDN:
 
 ```html
 <script src="https://unpkg.com/react@15/dist/react.js"></script>
@@ -76,7 +76,7 @@ ReactDOM.render(
 
 ---
 
-### Running The Page
+### Running the Page
 
 Open `hello-world/index.html` and check if you see Hello world!
 
@@ -106,7 +106,7 @@ Note: You can add many parameters at the end to combine them.
 
 ---
 
-### for and class Attributes
+### `for` and `class` Attributes
 
 If you need to use `for` or `class` attributes, their names are `htmlFor` and `className`. For example,
 
@@ -175,7 +175,7 @@ JSX is a JavaScript alias which looks like a combination of JavaScript and XML (
 ```js
 ReactDOM.render(
   <h1>Hello world!</h1>,
-  document.getElementById('example')
+  document.getElementById('content')
 )
 ```
 
@@ -226,11 +226,11 @@ JSX is compiled into native/regular JavaScript which is run in the browsers.
 
 ---
 
-# Why Use Webpack?
+# Why use Webpack?
 
 ---
 
-# What Webpack Will do for You
+# What Webpack will do for You
 
 1. Bundle JS, CSS, etc.
 1. Minification
@@ -239,7 +239,7 @@ JSX is compiled into native/regular JavaScript which is run in the browsers.
 
 ---
 
-# What is and Why Babel?
+# What is and why Babel?
 
 ---
 
@@ -294,8 +294,6 @@ $ npm i babel-core@6 babel-loader@6 babel-preset-react@6 -D
 
 ---
 
-
-
 # Dependencies in `package.json`
 
 ```js
@@ -332,7 +330,7 @@ $ npm i babel-core@6 babel-loader@6 babel-preset-react@6 -D
 
 ---
 
-Webpack Config
+# Webpack Config
 
 ```
 webpack.config.js
@@ -431,7 +429,7 @@ Change `React.createElement` to `<h1>...</h1>` in `app.jsx`:
 ```js
 ReactDOM.render(
   <h1>Hello world!</h1>,
-  document.getElementById('example')
+  document.getElementById('content')
 )
 ```
 
@@ -476,7 +474,7 @@ ReactDOM.render(
     </h1>
     <p>This text is very useful for learning React.js.</p>
   </div>,
-  document.getElementById('example')
+  document.getElementById('content')
 )
 ```
 

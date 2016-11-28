@@ -183,7 +183,7 @@ Azat Mardan @azat_co
 1. Hello World
 1. JSX
 1. Babel and Webpack
-1. Hellow World with JSX
+1. Hello World with JSX
 
 ---
 

@@ -219,15 +219,15 @@ You can use `onKeyUp` event to capture enter and trigger the submission of the d
 
 
 ```js
-keyup(e) {
-  if (e.keyCode == 13) return this.sendData()
-},
+keyup(event) {
+  if (event.keyCode == 13) return this.sendData()
+}
 ```
 
 in render:
 
 ```html
-<form onKeyUp={this.keyup}>
+<form onKeyUp={this.keyup.bind(this)}>
 ```
 
 ---
@@ -259,8 +259,8 @@ For example, if we have an account number input field it needs to accept only nu
 
 ```js
   //...
-  change(e) {
-    this.setState({value: e.target.value.replace(/[^0-9]/ig, '')})
+  change(event) {
+    this.setState({value: event.target.value.replace(/[^0-9]/ig, '')})
   }
   //...
 ```
@@ -273,6 +273,7 @@ For example, if we have an account number input field it needs to accept only nu
 class Content extends React.Component {
   constructor() {
     this.state = {value: ''}
+    this.change = this.change.bind(this)
   }
   //...
   render() {
@@ -315,7 +316,7 @@ render() {
 ### Try it
 
 
-Controlled demo: <http://plnkr.co/edit/gfeCl8JPXqgJbG13Oc45?p=preview>.
+Controlled demo: <http://plnkr.co/edit/ouADpl?p=preview>.
 
 
 ---
@@ -354,12 +355,11 @@ Refs are used to get the DOM element of a React.js component:
 
 ### Refs' DOM
 
-You can access the component's DOM node directly by calling `React.findDOMNode(this.refs.NAME)`, e.g.,
+You can access the component's DOM node directly by calling `ReactDOM.findDOMNode(this.refs.NAME)`, e.g.,
 
 ```js
-React.findDOMNode(this.refs.email)
+ReactDOM.findDOMNode(this.refs.email)
 ```
-
 
 
 ---
@@ -373,11 +373,12 @@ class Content extends React.Component {
   constructor(props) {
     super(props)
     this.state = {value: ''}
+    this.change = this.change.bind(this)
   }
-  change(e) {
-    console.log(e.target.value)
-    console.log(React.findDOMNode(this.refs.textbox).value)
-    this.setState({value: e.target.value})
+  change(event) {
+    console.log(event.target.value)
+    console.log(ReactDOM.findDOMNode(this.refs.textbox).value)
+    this.setState({value: event.target.value})
   }
   render() {
     // ...
@@ -387,22 +388,38 @@ class Content extends React.Component {
 
 ---
 
-Uncontrolled component demo: <http://plnkr.co/edit/p1baE65AwKm52Yh6Lh6K?p=preview>.
+
+```js
+render() {
+  return <div>
+    <input type="text"
+      onChange={this.change}
+      placeholder="Hello!"
+      ref="textbox"
+      defaultValue={this.props.defaultValue || 'Howdy'}/>
+    <span>{this.state.value}</span>
+  </div>
+}
+```
 
 ---
 
-Let's put together browser events, component composition, props and states! :carousel_horse:
+Uncontrolled component demo: <http://plnkr.co/edit/zmmhXU?p=preview>.
+
+---
+
+## Let's put together browser events, component composition, props and states! :carousel_horse:
 
 ---
 
 # Timer Project
 
-Source code: `code/react/timer`
+Source code: `code/timer`
 
 ---
 
 
-![](images/timer.png)
+![fit](images/timer-1.png)
 
 ---
 
@@ -413,7 +430,12 @@ Source code: `code/react/timer`
 * Webpack, JSX, Babel, modules, npm
 * Static (`node-static`) is not included in package.json
 
-`code/react/timer`
+`code/timer`
+
+
+---
+
+# Demo 💻
 
 ---
 
