@@ -382,8 +382,7 @@ Source code:  `code/autocomplete`
 ## Workshop: Autocomplete 🔨💻😁
 
 1. Make it work (`mongod`?)
-1. Add remove/delete/x icon/button to *each* chat room in views
+1. Add remove/delete/x icon/button to *each* name
 1. Add a REST endpoint to delete
-1. Add AJAX/XHR call to remove message (pass ID in the URL as as DELETE /rooms/:id)
+1. Add AJAX/XHR call to remove name (pass ID in the URL as as DELETE /rooms/:id)
 1. Deploy to cloud: Heroku, now.sh, AWS, etc.
-
