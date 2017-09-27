@@ -13,36 +13,39 @@ const AnalogDisplay = function(props) {
     borderColor: 'black'
   }
   let secondHandStyle = {
-    position: 'relative',
+    position: 'absolute',
     top: 100,
     left: 100,
     border: '1px solid red',
     width: '40%',
     height: 1,
     transform: 'rotate(' + ((date.getSeconds()/60)*360 - 90 ).toString() + 'deg)',
-    transformOrigin: '0% 0%',
+    transformOrigin: '0px',
+    transformOrigin: 'left',
     backgroundColor: 'red'
   }
   let minuteHandStyle = {
-    position: 'relative',
+    position: 'absolute',
     top: 100,
     left: 100,
     border: '1px solid grey',
     width: '40%',
     height: 3,
     transform: 'rotate(' + ((date.getMinutes()/60)*360 - 90 ).toString() + 'deg)',
-    transformOrigin: '0% 0%',
+    transformOrigin: '0px',
+    transformOrigin: 'left',
     backgroundColor: 'grey'
   }
   let hourHandStyle = {
-    position: 'relative',
-    top: 92,
-    left: 106,
+    position: 'absolute',
+    top: 100,
+    left: 100,
     border: '1px solid grey',
     width: '20%',
     height: 7,
     transform: 'rotate(' + ((date.getHours()/12)*360 - 90 ).toString() + 'deg)',
-    transformOrigin: '0% 0%',
+    transformOrigin: '0px',
+    transformOrigin: 'left',
     backgroundColor: 'grey'
   }
   return <div>
