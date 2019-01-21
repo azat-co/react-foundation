@@ -1,11 +1,11 @@
-footer: © NodeProgram.com, Node.University and Azat Mardan 2017
+footer: © NodeProgram.com, Node.University and Azat Mardan
 slidenumbers: true
 
 # React Foundation
 ## Module 4: Advancing Components
 
 ![inline 100%](images/azat.jpeg)
-Azat Mardan @azat_co
+Azat Mardan [@azatmardan](https://twitter.com/azatmardan)
 
 ![inline right](images/nu.png)
 
@@ -107,7 +107,7 @@ This class will have an optional `title` prop of the string type:
 ```js
 class Button extends React.Component {
   //...
-}  
+}
 Button.propTypes = {
   title: React.PropTypes.string
 }
@@ -122,7 +122,7 @@ To make a prop required just add `isRequired` to the type. This class will have 
 
 ```js
 class Button extends React.Component {
-  //...  
+  //...
 }
 Button.propTypes = {
   handler:  React.PropTypes.func.isRequired

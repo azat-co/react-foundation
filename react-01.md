@@ -1,11 +1,11 @@
-footer: © NodeProgram.com, Node.University and Azat Mardan 2017
+footer: © NodeProgram.com, Node.University and Azat Mardan
 slidenumbers: true
 
 # React Foundation
 ## Module 1: Baby Steps
 
 ![inline 100%](images/azat.jpeg)
-Azat Mardan @azat_co
+Azat Mardan [@azatmardan](https://twitter.com/azatmardan)
 
 ![inline right](images/nu.png)
 
@@ -20,8 +20,18 @@ Azat Mardan @azat_co
 KISS by linking to CDN:
 
 ```html
-<script src="https://unpkg.com/react@15/dist/react.js"></script>
-<script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+```
+
+
+---
+
+### Prod CDN
+
+```html
+<script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
 ```
 
 ---
@@ -208,8 +218,8 @@ JSX is compiled into native/regular JavaScript which is run in the browsers.
 ### Ways to use JSX
 
 1. Pre-process with `babel-cli`: production recommended
-1. Build with Gulp, Grunt, Webpack and Babel: production recommended
-1. Run-time via `babel-core`: development or demo only
+2. Build with Gulp, Grunt, Webpack and Babel: production recommended
+3. Run-time via `babel-core`: development or demo only
 
 ---
 
@@ -486,7 +496,7 @@ Remember to always have only one element as the top level tag!
 For example, this is a **no go**:
 
 ```js
-ReactDOM.render(  
+ReactDOM.render(
   <h1>
     Core React.js
   </h1>
