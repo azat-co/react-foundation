@@ -58,7 +58,7 @@ class Autocomplete extends React.Component {
           onKeyUp={(event)=>(event.keyCode==13)?this.addOption():''}
           className="form-control option-name"
           onChange={this.filter}
-          value={this.currentOption}
+          value={this.state.currentOption}
           placeholder="React.js">
         </input>
         {this.state.filteredOptions.map(function(option, index, list){
